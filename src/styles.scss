@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://unpkg.com/leaflet@1.7.1/dist/leaflet.css");
+
+.leaflet-popup-content {
+    width: 300px;
+    margin: 13px 19px;
+    line-height: 1.4;
+}
+
+.leaflet-popup-content img {
+    width: 100%;
+}
