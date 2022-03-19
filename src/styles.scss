@@ -1,5 +1,13 @@
 @import url("https://unpkg.com/leaflet@1.7.1/dist/leaflet.css");
 
+@import "/src/app/scss/animations";
+@import "/src/app/scss/base";
+@import "/src/app/scss/functions";
+@import "/src/app/scss/mixins";
+@import "/src/app/scss/typography";
+@import "/src/app/scss/utilities";
+@import "/src/app/scss/variables";
+
 .leaflet-popup-content {
     width: 300px;
     margin: 13px 19px;
@@ -8,4 +16,76 @@
 
 .leaflet-popup-content img {
     width: 100%;
+}
+
+.OCM-app-root {
+    width: 98vw;
+    min-height: 100vh;
+    // margin-left: 20px;
+    display: grid;
+    grid-template-rows: 40px auto 40px;
+}
+
+.OCM-navbarFooter {
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    background-color: map-get($OCM-colors, navBarBackground);
+    &--brand {
+        display: flex;
+        justify-content: space-between;
+        &--logo {
+            @include OCM-logo;
+            background: url("./assets/img/LogoImg.jpg") no-repeat center center;
+        }
+        &--text {
+            @include OCM-text;
+            font-size: 12px;
+        }
+    }
+    &--title {
+        @include OCM-text;
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    }
+    &--rrss {
+        display: flex;
+        flex-direction: row;
+        .logoFacebook {
+            @include OCM-logo;
+            background: url("./assets/img/facebook.svg") no-repeat center center;
+        }
+        .logoTwitter {
+            @include OCM-logo;
+            background: url("./assets/img/twitter.svg") no-repeat center center;
+        }
+    }
+    &--homeEmpty {
+        display: flex;
+        flex-direction: row;
+        width: 246px;
+    }
+    &--home {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 246px;
+        .logoHome {
+            @include OCM-logo;
+            background: url("./assets/img/home.svg") no-repeat center center;
+            margin-right: 20px;
+        }
+    }
+    &--mail {
+        @include OCM-text;
+        text-decoration-style: none;
+        margin-right: 20px;
+        a:hover {
+            transform: scale(1.2);
+        }
+    }
 }
