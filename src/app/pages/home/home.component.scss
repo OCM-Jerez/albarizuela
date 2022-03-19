@@ -1,0 +1,68 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 200px 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logo logo text text"
+        "photo1 photo2 photo3 photo4"
+        "targets targets targets targets"
+        "info1 info2 info3 info4";
+}
+
+.logo {
+    grid-area: logo;
+    margin: auto;
+}
+
+.text {
+    grid-area: text;
+    margin: auto;
+    padding: 30px;
+    background-color: #2d678a;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.photo1 {
+    grid-area: photo1;
+    justify-self: center;
+}
+
+.photo2 {
+    grid-area: photo2;
+    justify-self: center;
+}
+
+.photo3 {
+    grid-area: photo3;
+    justify-self: center;
+}
+
+.photo4 {
+    grid-area: photo4;
+    justify-self: center;
+}
+
+.targets {
+    grid-area: targets;
+    margin: auto;
+    padding: 30px;
+    background-color: #f2f9fd;
+    color: rgb(1, 12, 20);
+    font-size: 16px;
+}
+
+.info1 {
+    grid-area: info1;
+}
+.info2 {
+    grid-area: info2;
+}
+.info3 {
+    grid-area: info3;
+}
+.info4 {
+    grid-area: info4;
+}
