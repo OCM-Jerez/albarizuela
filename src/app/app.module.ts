@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,8 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     AgGridModule.withComponents([]),
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
 
   ],
   providers: [],

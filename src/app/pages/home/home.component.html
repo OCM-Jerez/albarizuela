@@ -1,5 +1,4 @@
 <div class="container">
-    <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
     <div class="logo">
         <img src="../../../assets/img/Logo.png" alt="">
     </div>
@@ -29,14 +28,21 @@
     </div>
     <div class="targets">
         <h1>Nuestros principales objetivos son:</h1>
-        <br>
+        <mat-list>
+            <mat-list-item *ngFor="let target of targets">
+                <!-- <mat-icon mat-list-icon>folder</mat-icon> -->
+                <h3 matLine> {{target.text}} </h3>
+            </mat-list-item>
+        </mat-list>
+        <!-- <br>
         <h1>Crear unidad entre los vecinos.</h1>
         <h1>Representar a los vecinos y defender los intereses generales de los mismos. </h1>
         <h1>Informar y apoyar a los vecinos en cuestiones de interés general.</h1>
         <h1>Intentar que se mejoren las infraestructuras del barrio.</h1>
         <h1>Exigir al Ayuntamiento la mejora de la seguridad y limpieza de las calles y aceras del barrio.</h1>
-        <h1>Realizar actividades culturales, infantiles, cursos, talleres..., que den vida a la zona.</h1>
+        <h1>Realizar actividades culturales, infantiles, cursos, talleres..., que den vida a la zona.</h1> -->
     </div>
+
     <div class="info1">
         <mat-card class="example-card">
             <mat-card-header>
@@ -125,4 +131,5 @@
             </mat-card-actions>
         </mat-card>
     </div>
+
 </div>
