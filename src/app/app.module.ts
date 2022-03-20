@@ -9,6 +9,7 @@ import { MapComponent } from './pages/map/map.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TableProblemasComponent } from './pages/table-problemas/table-problemas.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AgGridModule } from 'ag-grid-angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    BrowserAnimationsModule
 
   ],
   providers: [],
