@@ -9,7 +9,7 @@ export class NavbarComponent {
   constructor(
     public router: Router
   ) {
-    console.log(router.url);
+
 
 
   }
