@@ -8,6 +8,7 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { MapComponent } from './pages/map/map.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TableProblemasComponent } from './pages/table-problemas/table-problemas.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TableProblemasComponent } from './pages/table-problemas/table-problemas
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AgGridModule.withComponents([])
 
   ],
   providers: [],
