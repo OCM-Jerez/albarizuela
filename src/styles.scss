@@ -102,10 +102,15 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.container {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
 .menu-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 300px;
+    width: 400px;
     height: 30px;
 }

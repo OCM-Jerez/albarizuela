@@ -3,18 +3,18 @@
         <img src="../../../assets/img/Logo.png" alt="">
     </div>
     <div class="text">
-        <h1>Durante muchos años en nuestro barrio no</h1>
-        <h1>se han llevado a cabo nuevas</h1>
-        <h1>infraestructuras ni se han renovado las </h1>
-        <h1>existentes, que se han ido deteriorando con</h1>
-        <h1>el paso de los años.</h1>
+        <h1>Durante muchos años en nuestro barrio no se han llevado a cabo nuevas infraestructuras ni se han renovado
+            las existentes, que se han ido deteriorando con el paso de los años.</h1>
         <br>
-        <h1>Para mejorar esta situación</h1>
-        <h1> ¡NECESITAMOS TU AYUDA!</h1>
-        <h1></h1>
+        <span>Para mejorar esta situación</span>
+        <br>
+        <br>
+        <br>
+        <span> ¡NECESITAMOS TU AYUDA!</span>
+
 
     </div>
-    <div class="photo1">
+    <!-- <div class="photo1">
         <img src="../../../assets/img/bizcocheros.jpg" alt="">
     </div>
     <div class="photo2">
@@ -25,110 +25,113 @@
     </div>
     <div class="photo4">
         <img src="../../../assets/img/sanAndres.jpg" alt="">
-    </div>
-    <div class="targets">
-        <h1>Nuestros principales objetivos son:</h1>
-        <mat-list>
-            <mat-list-item *ngFor="let target of targets">
-                <!-- <mat-icon mat-list-icon>folder</mat-icon> -->
-                <h3 matLine> {{target.text}} </h3>
-            </mat-list-item>
-        </mat-list>
-        <!-- <br>
+    </div> -->
+    <!-- <div class="targets"> -->
+    <!-- <h1>Nuestros principales objetivos son:</h1> -->
+    <!-- <mat-list> -->
+    <!-- <mat-list-item *ngFor="let target of targets"> -->
+    <!-- <mat-icon mat-list-icon>folder</mat-icon> -->
+    <!-- <h3 matLine> {{target.text}} </h3> -->
+    <!-- </mat-list-item> -->
+    <!-- </mat-list> -->
+    <!-- <br>
         <h1>Crear unidad entre los vecinos.</h1>
         <h1>Representar a los vecinos y defender los intereses generales de los mismos. </h1>
         <h1>Informar y apoyar a los vecinos en cuestiones de interés general.</h1>
         <h1>Intentar que se mejoren las infraestructuras del barrio.</h1>
         <h1>Exigir al Ayuntamiento la mejora de la seguridad y limpieza de las calles y aceras del barrio.</h1>
         <h1>Realizar actividades culturales, infantiles, cursos, talleres..., que den vida a la zona.</h1> -->
+    <!-- </div> -->
+    <div class="targets">
+        <span>Nuestros objetivos</span>
     </div>
+
+    <div class="photo1">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title style="height:80px "> Crear unidad entre las personas residentes en la zona.
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image style="height:300px" src="../../../assets/img/target1.png" alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+    <div class="photo2">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title style="height:80px">Representar a las personas residentes en la zona y defender los
+                    intereses generales de las
+                    mismas.
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image style="height:300px" src="../../../assets/img/representar.png"
+                alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+    <div class="photo3">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title style="height:80px">Informar y apoyar a a las personas residentes en la zona en
+                    cuestiones de interés general.
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image style="height:300px" src="../../../assets/img/informar.png" alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+    <div class="photo4">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title style="height:80px">Intentar que se mejoren las infraestructuras del barrio.
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image style="height:300px" src="../../../assets/img/mejora.png" alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+    <div class="photo5">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title style="height:80px">Exigir al Ayuntamiento la mejora de la seguridad de nuestra zona, la
+                    limpieza de las
+                    calles y acerados del barrio.</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image style="height:300px" src="../../../assets/img/exigir.png" alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+    <div class="photo6">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title style="height:80px">Realizar actividades culturales, infantiles, cursos, talleres...,
+                    que den vida a la zona.</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image style="height:300px" src="../../../assets/img/actividades.png"
+                alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+
+    <div class="contact">
+        <span>Nuestras formas de contacto</span>
+    </div>
+
 
     <div class="info1">
         <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
+
+            <a href="https://www.facebook.com/laalbarizuela" class="contactos" target="_blank"
+                rel="nofollow">Facebook</a>
+
+            <img mat-card-image style="height:300px" src="../../../assets/img/facebook1.png" alt="Photo of a Shiba Inu">
         </mat-card>
     </div>
     <div class="info2">
         <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
+            <a href="mailto:info@albarizuela.es" class="contactos"> info@albarizuela.es</a>
+            <img mat-card-image style="height:300px" src="../../../assets/img/email.png" alt="Photo of a Shiba Inu">
         </mat-card>
     </div>
+
     <div class="info3">
         <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    <div class="info4">
-        <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
+            <a href="tel:+34 609536800" class="contactos"> 609536800</a>
+            <img mat-card-image style="height:300px" src="../../../assets/img/movil.png" alt="Photo of a Shiba Inu">
         </mat-card>
     </div>
 
