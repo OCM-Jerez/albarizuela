@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TableProblemasComponent } from './pages/table-problemas/table-problemas.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConteneroresBizcocherosComponent } from './pages/contenerores-bizcocheros/contenerores-bizcocheros.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     HomeComponent,
     TableProblemasComponent,
+    ConteneroresBizcocherosComponent,
   ],
   imports: [
     BrowserModule,
