@@ -1,11 +1,14 @@
 import { AfterViewInit, Component } from '@angular/core';
-import L, { Map, marker, polyline, tileLayer, circle, Icon, control } from 'leaflet';
+import L, { Map, marker, polyline, tileLayer, circle, Icon, control, polygon } from 'leaflet';
 
 import { problemas, ideas } from '../../../assets/markers/problemas';
 import { limitesAlbarizuela } from '../../../assets/data/limitesAlbarizuela';
 import { ds02021 } from '../../../assets/data/02-021';
 import { ds02004 } from '../../../assets/data/02-004';
 import { ds02014 } from '../../../assets/data/02-014';
+import { ds02011 } from '../../../assets/data/02-011';
+import { ds02013 } from '../../../assets/data/02-013';
+import { ds02026 } from '../../../assets/data/02-026';
 import { ds02003 } from '../../../assets/data/02-003';
 
 @Component({
@@ -26,7 +29,10 @@ export class MapComponent implements AfterViewInit {
     limitesAlbarizuela.forEach(element => {
       limitesAlbarizuelaArray.push([element.lat, element.lng])
     });
-    polyline(limitesAlbarizuelaArray, { color: 'red' }).addTo(mapProblemas);
+    polyline(limitesAlbarizuelaArray, {
+      color: 'red',
+      weight: 9
+    }).addTo(mapProblemas);
 
     // const ds_02_021: [number, number][] = [
     //   [
@@ -49,19 +55,63 @@ export class MapComponent implements AfterViewInit {
     ds02021.forEach(element => {
       ds02021Array.push([element.lat, element.long])
     });
-    polyline(ds02021Array, { color: 'green' }).addTo(mapProblemas);
+    polygon(ds02021Array, {
+      color: 'green',
+      fillColor: 'green',
+      fillOpacity: 0.1
+    }).addTo(mapProblemas);
 
     const ds02004Array: [number, number][] = [];
     ds02004.forEach(element => {
       ds02004Array.push([element.lat, element.lng])
     });
-    polyline(ds02004Array, { color: 'blue' }).addTo(mapProblemas);
+    polygon(ds02004Array, {
+      color: 'blue',
+      fillColor: 'blue',
+      fillOpacity: 0.2
+    }).addTo(mapProblemas);
 
     const ds02014Array: [number, number][] = [];
     ds02014.forEach(element => {
       ds02014Array.push([element.lat, element.lng])
     });
-    polyline(ds02014Array, { color: 'yellow' }).addTo(mapProblemas);
+    polygon(ds02014Array, {
+      color: 'yellow',
+      fillColor: 'yellow',
+      fillOpacity: 0.2
+    }).addTo(mapProblemas);
+
+    const ds02026Array: [number, number][] = [];
+    ds02026.forEach(element => {
+      ds02026Array.push([element.lat, element.lng])
+    });
+    polygon(ds02026Array, {
+      color: 'black',
+      fillColor: 'black',
+      fillOpacity: 0.2
+    }).addTo(mapProblemas);
+
+    const ds02011Array: [number, number][] = [];
+    ds02011.forEach(element => {
+      ds02011Array.push([element.lat, element.lng])
+    });
+    polygon(ds02011Array, {
+      color: 'green',
+      fillColor: 'green',
+      fillOpacity: 0.1
+    }).addTo(mapProblemas);
+
+    const ds02013Array: [number, number][] = [];
+    ds02013.forEach(element => {
+      ds02013Array.push([element.lat, element.lng])
+    });
+    polygon(ds02013Array, {
+      color: 'blue',
+      fillColor: 'blue',
+      fillOpacity: 0.2
+    }).addTo(mapProblemas);
+
+
 
     // Corresponde a Barriada España
     // const ds02003Array: [number, number][] = [];
