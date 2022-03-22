@@ -16,7 +16,7 @@ export class MapComponent implements AfterViewInit {
   ngAfterViewInit(): void {
 
     // http://leaflet-extras.github.io/leaflet-providers/preview/
-    const mapProblemas = new Map('map').setView([36.6706, -6.1318,], 13);
+    const mapProblemas = new Map('map');
 
     const limitesAlbarizuelaArray: [number, number][] = [];
     limitesAlbarizuela.forEach(element => {
@@ -212,6 +212,7 @@ export class MapComponent implements AfterViewInit {
       ).addTo(mapProblemas).bindPopup(point.title);
     })
 
+    mapProblemas.setView([36.68519, -6.13229,], 18);
 
     // Control de capas
     // https://www.youtube.com/watch?v=psTsxc1045k&list=PLaaTcPGicjqgLAUhR_grKBGCXbyKaP7qR&index=58
@@ -229,139 +230,6 @@ export class MapComponent implements AfterViewInit {
 
     // control.layers(baseLayers, overlays).addTo(map);
 
-
-
-
-    // const laComediaImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647542811/albarizuela/fotosRutas/laComedia_ipj43w.jpg"
-    // const laComediaMarker = marker([36.68593, -6.13121]).addTo(map).bindPopup(`
-    // <h1>Acerado en La Comedia</h1>
-    // <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-    // <h4>.- Se actuará de inmediato reparando acerado.</h4>
-    // <img src="${laComediaImg}" alt="La Comedia" width="100px">`);
-
-    //   const plazaQuemadaImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647544312/albarizuela/fotosRutas/plazaQuemada_ierukr.jpg"
-    //   const plazaQuemadaMarker = marker([36.68519, -6.13229]).addTo(map).bindPopup(`
-    // <h1>Estado soleria Plaza Quemada</h1>
-    // <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-    // <h4>.- Se actuará de inmediato reparando soleria dañada y rellenando alcorque vacio.</h4>
-    // <img src="${plazaQuemadaImg}" alt="Plaza Quemada" width="100px">`);
-
-    const panaderiaBizcocherosImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647544743/albarizuela/fotosRutas/panaderiaBizcocheros_bpg2mn.jpg"
-    const panaderiaBizcocherosMarker = marker([36.68488, -6.13299]).addTo(mapProblemas).bindPopup(`
-  <h1>Problemas chimenea panaderia</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se estudiará pedir medidas correctoras de la instalación.</h4>
-  <img src="${panaderiaBizcocherosImg}" alt="panaderia" width="100px">`);
-    mapProblemas.fitBounds([[panaderiaBizcocherosMarker.getLatLng().lat, panaderiaBizcocherosMarker.getLatLng().lng]]);
-
-    const hosario14Img = "https://res.cloudinary.com/dabrencx7/image/upload/v1647545558/albarizuela/fotosRutas/Honsario14_hwuuzr.jpg"
-    const hosario14Marker = marker([36.68459, -6.13242]).addTo(mapProblemas).bindPopup(`
-  <h1>Casa vendida pero que continua en mal estado</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se informa del estado de la fachada con peligro de desprendimiento partes de la misma.</h4>
-  <img src="${hosario14Img}" alt="Honsario" width="100px">`);
-
-    const hosario12Img = "https://res.cloudinary.com/dabrencx7/image/upload/v1647545558/albarizuela/fotosRutas/Honsario14_hwuuzr.jpg"
-    const hosario12Marker = marker([36.68469, -6.13240]).addTo(mapProblemas).bindPopup(`
-  <h1>Casa propiedad del Ayuntamiento en mal estado</h1>
-  <h3>Antigua sede Asociación diabeticos</h3>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se solicita alguna medida para esta casa.</h4>
-  <img src="${hosario14Img}" alt="Honsario" width="100px">`);
-
-    const hosario9Img = "https://res.cloudinary.com/dabrencx7/image/upload/v1647545558/albarizuela/fotosRutas/Honsario14_hwuuzr.jpg"
-    const hosario9Marker = marker([36.68410, -6.13258]).addTo(mapProblemas).bindPopup(`
-  <h1>Casa abandonada okupada por persona confictiva</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se solicita alguna medida para esta casa.</h4>
-  <img src="${hosario14Img}" alt="Honsario" width="100px">`);
-
-    const residenciaUniversitariaImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647546790/albarizuela/fotosRutas/residenciaUniversitaria_ritnzx.jpg"
-    const residenciaUniversitariaMarker = marker([36.68439, -6.13321]).addTo(mapProblemas).bindPopup(`
-  <h1>Antigua residencia universitaria</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se solicita su inclusión en el Registro de Solares.</h4>
-  <img src="${residenciaUniversitariaImg}" alt="residencia" width="100px">`);
-
-    //   const caldererosImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647547099/albarizuela/fotosRutas/Caldereros_sxrbgn.jpg"
-    //   const caldererosMarker = marker([36.68528, -6.13279]).addTo(mapProblemas).bindPopup(`
-    // <h1>Calle Caldereros</h1>
-    // <h3>Ejemplo de paso de plataforma única a acerado estrecho actual</h3>
-    // <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-    // <h4>.- Se toma como ejemplo para actuaciones futuras.</h4>
-    // <img src="${caldererosImg}" alt="Don Juan" width="100px">`);
-
-    const contenedoresBizcocherosValientesImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647547740/albarizuela/fotosRutas/contenedoresBizcocherosValientes_g3kkuv.jpg"
-    const contenedoresBizcocherosValientesMarker = marker([36.68505, -6.13403]).addTo(mapProblemas).bindPopup(`
-  <h1>Contenedores de basura</h1>
-  <h3>17/03/2022 Problemas con los vecinos.</h3>
-  <h4>.- Se tratará de hablar con todos los vecinos afectados.</h4>
-  <img src="${contenedoresBizcocherosValientesImg}" alt="caldereros" width="100px">`);
-
-    const donJuanImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647547863/albarizuela/fotosRutas/donJuan_n1jzfo.jpg"
-    const donJuanMarker = marker([36.68501, -6.13172]).addTo(mapProblemas).bindPopup(`
-  <h1>Falta de acerados</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se informa de la gran cantidad de turistas que pasan al salir de bodegas Lustau.</h4>
-  <h4>.- Actuaciones a estudiar.</h4>
-  <img src="${donJuanImg}" alt="donJuan" width="100px">`);
-
-    const donJuan12Img = "https://res.cloudinary.com/dabrencx7/image/upload/v1647548250/albarizuela/fotosRutas/donJuan12_or48gq.jpg"
-    const donJuan12Marker = marker([36.68445, -6.13186]).addTo(mapProblemas).bindPopup(`
-  <h1>Casa abandonada y okupada</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se solicita su inclusión en el Registro de Solares.</h4>
-  <img src="${donJuan12Img}" alt="donJuan" width="100px">`);
-
-    const HiguerasImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647554263/albarizuela/fotosRutas/Higueras_euxcxy.jpg"
-    const HiguerasMarker = marker([36.68145, -6.13363]).addTo(mapProblemas).bindPopup(`
-  <h1>Problemas en el vial debido obras Plaza Las Angustias</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- </h4>
-  <img src="${HiguerasImg}" alt="Higueras" width="100px">`);
-
-
-    const Higueras1Marker = marker([36.68190, -6.13330]).addTo(mapProblemas).bindPopup(`
-<h1>Dificultades para entrar y salir al quedar de una sola dirección.</h1>
-<h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-<h4>.- </h4>
-<img src="${HiguerasImg}" alt="Higueras" width="100px">`);
-
-    const rosarioImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647554586/albarizuela/fotosRutas/rosario_hkevrm.jpg"
-    const rosarioMarker = marker([36.68685, -6.13516]).addTo(mapProblemas).bindPopup(`
-  <h1>Contenedores soterrados</h1>
-  <h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-  <h4>.- Se rellenarán.</h4>
-  <img src="${rosarioImg}" alt="Rosario" width="100px">`);
-
-    const sanAndresImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647554796/albarizuela/fotosRutas/SanAndres_xglwx1.jpg"
-    const sanAndresMarker = marker([36.68703, -6.134405]).addTo(mapProblemas).bindPopup(`
-<h1>Contenedores soterrados</h1>
-<h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-<h4>.- Se rellenarán.</h4>
-<img src="${sanAndresImg}" alt="San Andres" width="100px">`);
-
-    const sanAndres1Img = "https://res.cloudinary.com/dabrencx7/image/upload/v1647555221/albarizuela/fotosRutas/SanAndres1_cxo2tc.jpg"
-    const sanAndres1Marker = marker([36.68698, -6.13500]).addTo(mapProblemas).bindPopup(`
-<h1>Contenedores soterrados</h1>
-<h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-<h4>.- Se rellenarán.</h4>
-<img src="${sanAndres1Img}" alt="San Andres" width="100px">`);
-
-    const santaRosaImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647554970/albarizuela/fotosRutas/santaRosa_dmdjja.jpg"
-    const sanTaRosaMarker = marker([36.68738, -6.13545]).addTo(mapProblemas).bindPopup(`
-<h1>Contenedores soterrados</h1>
-<h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-<h4>.- Se rellenarán.</h4>
-<img src="${santaRosaImg}" alt="Santa Rosa" width="100px">`);
-
-    const prietaImg = "https://res.cloudinary.com/dabrencx7/image/upload/v1647595463/albarizuela/fotosRutas/prieta_te4brq.jpg"
-    const prietaMarker = marker([36.68354, -6.13318]).addTo(mapProblemas).bindPopup(`
-<h1>Peatonalización calle Prieta</h1>
-<h3>17/03/2022 Visita Jose Antonio Díaz.</h3>
-<h4>.- Se plantea posibilidad de peatonalizar esta calle
-debido a los problemas de circulación con peatones.</h4>
-<img src="${prietaImg}" alt="Prieta" width="100px">`);
 
   }
 }
