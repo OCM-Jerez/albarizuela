@@ -4,6 +4,10 @@ import L, { Map, marker, polyline, tileLayer, circle, Icon, control } from 'leaf
 import { problemas, ideas } from '../../../assets/markers/problemas';
 import { limitesAlbarizuela } from '../../../assets/data/limitesAlbarizuela';
 import { ds02021 } from '../../../assets/data/02-021';
+import { ds02004 } from '../../../assets/data/02-004';
+import { ds02014 } from '../../../assets/data/02-014';
+import { ds02003 } from '../../../assets/data/02-003';
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -22,7 +26,7 @@ export class MapComponent implements AfterViewInit {
     limitesAlbarizuela.forEach(element => {
       limitesAlbarizuelaArray.push([element.lat, element.lng])
     });
-    polyline(limitesAlbarizuelaArray, { color: 'blue' }).addTo(mapProblemas);
+    polyline(limitesAlbarizuelaArray, { color: 'red' }).addTo(mapProblemas);
 
     // const ds_02_021: [number, number][] = [
     //   [
@@ -46,6 +50,25 @@ export class MapComponent implements AfterViewInit {
       ds02021Array.push([element.lat, element.long])
     });
     polyline(ds02021Array, { color: 'green' }).addTo(mapProblemas);
+
+    const ds02004Array: [number, number][] = [];
+    ds02004.forEach(element => {
+      ds02004Array.push([element.lat, element.lng])
+    });
+    polyline(ds02004Array, { color: 'blue' }).addTo(mapProblemas);
+
+    const ds02014Array: [number, number][] = [];
+    ds02014.forEach(element => {
+      ds02014Array.push([element.lat, element.lng])
+    });
+    polyline(ds02014Array, { color: 'yellow' }).addTo(mapProblemas);
+
+    // Corresponde a Barriada España
+    // const ds02003Array: [number, number][] = [];
+    // ds02003.forEach(element => {
+    //   ds02003Array.push([element.lat, element.lng])
+    // });
+    // polyline(ds02003Array, { color: 'green' }).addTo(mapProblemas);
 
     // const bizcocheros: [number, number][] = [
     //   [
