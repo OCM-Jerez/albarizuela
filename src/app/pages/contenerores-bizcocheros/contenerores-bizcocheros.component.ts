@@ -366,7 +366,10 @@ export class ConteneroresBizcocherosComponent implements AfterViewInit {
       ]
     ]
 
-    polyline(latlngs, { color: 'red' }).addTo(map);
+    polyline(latlngs, {
+      color: 'red',
+      weight: 9
+    }).addTo(map);
 
 
     const bizcocheros: [number, number][] = [
