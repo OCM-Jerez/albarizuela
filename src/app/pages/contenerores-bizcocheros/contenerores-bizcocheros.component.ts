@@ -12,7 +12,7 @@ export class ConteneroresBizcocherosComponent implements AfterViewInit {
   ngAfterViewInit(): void {
 
     // http://leaflet-extras.github.io/leaflet-providers/preview/
-    const map = new Map('map').setView([36.68505, -6.13403], 18);
+    const map = new Map('map1').setView([36.68505, -6.13403], 18);
 
     // create a red polyline from an array of LatLng points
     const latlngs: [number, number][] = [
