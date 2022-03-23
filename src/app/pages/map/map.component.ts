@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import L, { Map, marker, polyline, tileLayer, circle, Icon, control, polygon } from 'leaflet';
 
 import { problemas, ideas } from '../../../assets/markers/problemas';
+import { distritoCentro } from '../../../assets/data/distritoCentro';
 import { limitesAlbarizuela } from '../../../assets/data/limitesAlbarizuela';
 import { ds02021 } from '../../../assets/data/02-021';
 import { ds02004 } from '../../../assets/data/02-004';
@@ -24,6 +25,16 @@ export class MapComponent implements AfterViewInit {
 
     // http://leaflet-extras.github.io/leaflet-providers/preview/
     const mapProblemas = new Map('map');
+
+    const distritoCentroArray: [number, number][] = [];
+    distritoCentro.forEach(element => {
+      distritoCentroArray.push([element.lat, element.lng])
+    });
+    polyline(distritoCentroArray, {
+      color: 'red',
+      weight: 9
+    }).addTo(mapProblemas);
+
 
     const limitesAlbarizuelaArray: [number, number][] = [];
     limitesAlbarizuela.forEach(element => {
