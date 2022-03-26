@@ -1,21 +1,24 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 140px 500px 500px 140px 500px;
-    gap: 20px 80px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 450px 140px 500px 140px 500px;
+    // gap: 20px 80px;
     grid-auto-flow: row;
     grid-template-areas:
-        "logo text text"
-        "targets targets targets "
-        "photo1 photo2 photo3"
-        "photo4 photo5 photo6"
-        "contact contact contact "
-        "info1 info2 info3 ";
+        "logo text text text text text"
+        "targets targets targets targets targets targets "
+        "photo1 photo2 photo3 photo4 photo5 photo6"
+        " contact contact contact contact contact contact"
+        "info1 info1 info2 info2 info3 info3";
 }
 
 .logo {
-    grid-area: logo;
-    margin: auto;
+    background: url("../../../assets/img/Logo.png");
+    background-size: contain;
+    // margin: auto;
+    width: 480px;
+    height: 480px;
 }
 
 .text {
@@ -26,7 +29,7 @@
     padding: 30px;
     background-color: #2d678a;
     color: rgb(206, 219, 231);
-    font-size: 40px;
+    font-size: 26px;
     align-content: center;
 
     display: flex;
@@ -39,31 +42,47 @@
     grid-area: photo1;
     justify-self: center;
     object-fit: contain;
+    width: 192px;
+    height: 256px;
 }
 
 .photo2 {
     grid-area: photo2;
     justify-self: center;
     object-fit: contain;
+    width: 192px;
+    height: 256px;
 }
 
 .photo3 {
     grid-area: photo3;
     justify-self: center;
+    object-fit: contain;
+    width: 192px;
+    height: 256px;
 }
 
 .photo4 {
     grid-area: photo4;
     justify-self: center;
+    object-fit: contain;
+    width: 192px;
+    height: 256px;
 }
 
 .photo5 {
     grid-area: photo5;
     justify-self: center;
+    object-fit: contain;
+    width: 192px;
+    height: 256px;
 }
 .photo6 {
     grid-area: photo6;
     justify-self: center;
+    object-fit: contain;
+    width: 192px;
+    height: 256px;
 }
 .targets {
     grid-area: targets;
@@ -112,8 +131,204 @@
 .example-card {
     max-width: 400px;
 }
+.card-title {
+    width: 150px;
+    height: 120px;
+    font-size: 18px;
+}
 
-.example-header-image {
-    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-    background-size: cover;
+// @media screen and(max-width: 1500px) {
+//     .container {
+//         grid-template-columns: 1fr 1fr;
+//         grid-template-rows: 250px 140px 500px 500px 140px 500px;
+//         // gap: 20px 80px;
+//         grid-auto-flow: row;
+//         grid-template-areas:
+//             "logo text text"
+//             "targets targets targets"
+//             "photo1 photo2 photo3 "
+//             "photo3 photo4 photo6"
+//             "contact contact contact"
+//             "info1 info2 info3";
+//     }
+//     .logo {
+//         grid-area: logo;
+//         margin: auto;
+//         width: 280px;
+//         height: 280px;
+//     }
+//     .text {
+//         font-size: 22px;
+//     }
+//     .targets {
+//         font-size: 42px;
+//     }
+
+//     .contact {
+//         font-size: 42px;
+//     }
+// }
+
+@media screen and(max-width: 1450px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 325px 140px 350px 350px 140px 500px;
+        // gap: 20px 80px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "logo text text "
+            "targets targets targets"
+            "photo1 photo2 photo3"
+            "photo4 photo5 photo6"
+            "contact contact contact"
+            "info1 info2 info3";
+    }
+    .logo {
+        grid-area: logo;
+        // margin: auto;
+        width: 280px;
+        height: 280px;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .targets {
+        font-size: 32px;
+    }
+    .example-card {
+        max-width: 200px;
+    }
+
+    .mat-card-image {
+        width: 200px;
+        height: 200px;
+    }
+    .card-title {
+        width: 150px;
+        height: 120px;
+        font-size: 18px;
+    }
+
+    .photo1 {
+        grid-area: photo1;
+
+        justify-content: center;
+        width: 96px;
+        height: 125px;
+    }
+    .photo2 {
+        grid-area: photo2;
+        width: 96px;
+        height: 125px;
+    }
+    .photo3 {
+        grid-area: photo3;
+        width: 96px;
+        height: 125px;
+    }
+    .photo4 {
+        grid-area: photo4;
+        width: 96px;
+        height: 125px;
+    }
+    .photo5 {
+        grid-area: photo5;
+        width: 96px;
+        height: 125px;
+    }
+    .photo6 {
+        grid-area: photo6;
+        width: 96px;
+        height: 125px;
+    }
+    .contact {
+        font-size: 32px;
+    }
+}
+
+@media screen and(max-width: 1050px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 225px 100px 280px 280px 280px 100px 120px;
+        // gap: 20px 80px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "logo text "
+            "targets targets"
+            "photo1 photo2"
+            "photo3 photo4"
+            "photo5 photo6"
+            "contact contact"
+            "info1 info2"
+            "info3 info3";
+    }
+    .logo {
+        grid-area: logo;
+        margin: auto;
+        width: 140px;
+        height: 140px;
+    }
+    .text {
+        font-size: 14px;
+        margin: auto;
+        width: 580px;
+        height: 180px;
+    }
+    .targets {
+        font-size: 32px;
+    }
+    .example-card {
+        max-width: 200px;
+    }
+
+    .mat-card-image {
+        width: 200px;
+        height: 200px;
+    }
+    .card-title {
+        width: 150px;
+        height: 120px;
+        font-size: 18px;
+    }
+
+    .photo1 {
+        grid-area: photo1;
+        justify-content: center;
+        width: 96px;
+        height: 125px;
+    }
+    .photo2 {
+        grid-area: photo2;
+        width: 96px;
+        height: 125px;
+    }
+    .photo3 {
+        grid-area: photo3;
+        width: 96px;
+        height: 125px;
+    }
+    .photo4 {
+        grid-area: photo4;
+        width: 96px;
+        height: 125px;
+    }
+    .photo5 {
+        grid-area: photo5;
+        width: 96px;
+        height: 125px;
+    }
+    .photo6 {
+        grid-area: photo6;
+        width: 96px;
+        height: 125px;
+    }
+    .contact {
+        font-size: 32px;
+    }
+    .mat-card-image {
+        width: 100px;
+        height: 100px;
+    }
 }
