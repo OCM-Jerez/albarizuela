@@ -160,7 +160,7 @@
         margin: 0 auto;
         background-image: './assets/img/fondo.png';
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 325px 140px 450px 450px 140px 300px;
+        grid-template-rows: 325px 140px 300px 300px 140px 150px;
         // gap: 20px 80px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -199,15 +199,16 @@
     }
     .info-card {
         background-color: #474b64; 
-        width: 300px;
-        width: 200px;
-        max-width: 300px;
+       width: 125px;
+       height: 125px;
+        max-width: 100px;
         border-radius: 50%;
     }
 
     .mat-card-image {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
+        margin: auto;
     }
     .card-title {
         width: 150px;
@@ -251,8 +252,6 @@
         margin: auto;
         margin-top: 60px;
         margin-bottom: 60px;
-        // padding: 30px;
-        // background-color: #0973b1;
         color: #2d678a;
         font-size: 62px;
         font-weight: bold;
@@ -284,7 +283,7 @@
         width: 50%;
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 225px 100px 280px 280px 280px 150px 150px 275px;
+        grid-template-rows: 225px 100px 280px 280px 280px 150px 100px 145px;
         // gap: 20px 80px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -313,7 +312,12 @@
     }
     .targets {
         grid-area: targets;
-        font-size: 32px;
+        margin: auto;
+        padding: 30px;
+        // background-color: #0973b1;
+        color: #2d678a;
+        font-size: 62px;
+        font-weight: bold;
     }
     .example-card {
         width: 300px;
@@ -325,14 +329,15 @@
 
     .info-card {
         background-color: #474b64; 
-             width: 200px;
+              width: 125px;
+                height: 125px;
         max-width: 300px;
         border-radius: 50%;
     }
 
     .mat-card-image {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         margin: auto;
     }
 
@@ -375,7 +380,13 @@
         height: 125px;
     }
     .contact {
-        font-size: 32px;
+        grid-area: contact;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        color: #2d678a;
+        font-size: 62px;
+        font-weight: bold;
     }
     .info1 {
         grid-area: info1;
