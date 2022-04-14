@@ -276,11 +276,9 @@
     }
 }
 
-
-
-@media screen and(max-width: 2000px) {
+@media screen and(max-width: 1750px) {
     .container {
-        width: 50%;
+        width: 75%;
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 225px 100px 280px 280px 280px 150px 100px 145px;
@@ -385,7 +383,7 @@
         margin-top: 60px;
         margin-bottom: 60px;
         color: #2d678a;
-        font-size: 62px;
+        font-size: 52px;
         font-weight: bold;
     }
     .info1 {
@@ -499,7 +497,13 @@
         height: 125px;
     }
     .contact {
-        font-size: 52px;
+        grid-area: contact;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        color: #2d678a;
+        font-size: 42px;
+        font-weight: bold;
     }
     .info1 {
         grid-area: info1;
