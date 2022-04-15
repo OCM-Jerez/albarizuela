@@ -10,7 +10,7 @@
     "logo logo texto texto texto texto"
     ". . . . logoguia guia"
     "targets targets targets targets targets targets "
-    "photo1 photo2 photo3 photo4 photo5 photo6"
+    "example-card example-card example-card example-card example-card example-card"
     " contact contact contact contact contact contact"
     "info1 info1 info2 info2 info3 info3";
     color: aqua;
@@ -69,7 +69,7 @@
 .targets {
     grid-area: targets;
     margin: auto;
-    padding: 30px;
+    // padding: 31px;
     // background-color: #0973b1;
     color: #2d678a;
     font-size: 62px;
@@ -157,8 +157,10 @@
 }
 
 .example-card {
-    max-width: 400px;
-    min-width: 192px;
+    grid-area: example-card; 
+    width: 214px;
+  height: 275px;
+    border-radius: 10%;
     border-radius: 4%;
 }
 
@@ -175,359 +177,100 @@
     font-size: 18px;
 }
 
-@media screen and(max-width: 2500px) {
+@media screen and(max-width: 5380px) {
     .container {
-        width: 50%;
+        width: 70%;
         margin: 0 auto;
-        background-image: './assets/img/fondo.png';
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 325px 150px 140px 300px 300px 140px 150px;
-        // gap: 20px 80px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 210px 210px 210px 210px 210px 210px;
+        grid-template-rows: 245px 60px 50px 280px 80px 120px;       // gap: 20px 80px;
         grid-auto-flow: row;
         grid-template-areas:
-            "logo texto texto"
-            ". logoguia guia"
-            "targets targets targets"
-            "photo1 photo2 photo3"
-            "photo4 photo5 photo6"
-            "contact contact contact"
-            "info1 info2 info3";
+            ". logo texto texto texto ."
+            ". . . . logoguia guia"
+            "targets targets targets targets targets targets"
+            "photo1 photo2 photo3 photo4 photo5 photo6"
+            "contact contact contact contact contact contact"
+            "info1 info1 info2 info2 info3 info3"
     }
     .logo {
         grid-area: logo;
         // margin: auto;
-        width: 280px;
-        height: 280px;
+        width: 214px;
+        height: 214px;
     }
+
     .texto {
         grid-area: texto;
-        font-size: 20px;
-        margin-right: 30px;
-    }
-
-    .logoguia {
-        grid-area: logoguia; 
-        background: url("../../../assets/img/guia1.jpg");
-        border-radius: 8%;
-        margin-left: 250px;
-     }
-    
-    .guia {
-        grid-area: guia; 
-        font-size: 26px;
-        align-content: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: left;
-    }
-
-    .targets {
-        grid-area: targets;
-        margin: auto;
-        padding: 30px;
-        // background-color: #0973b1;
-        color: #2d678a;
-        font-size: 62px;
-        font-weight: bold;
-    }
-    
-    .example-card {
-        max-width: 200px;
-        min-width: 192px;
-        border-radius: 4%;
-    }
-    .info-card {
-        background-color: #474b64; 
-       width: 125px;
-       height: 125px;
-        max-width: 100px;
-        border-radius: 50%;
-    }
-
-    .mat-card-image {
-        width: 100px;
-        height: 100px;
-        margin: auto;
-    }
-    .card-title {
-        width: 150px;
-        height: 120px;
-        font-size: 18px;
-    }
-
-    .photo1 {
-        grid-area: photo1;
-        justify-content: center;
-        width: 96px;
-        height: 125px;
-    }
-    .photo2 {
-        grid-area: photo2;
-        width: 96px;
-        height: 125px;
-    }
-    .photo3 {
-        grid-area: photo3;
-        width: 96px;
-        height: 125px;
-    }
-    .photo4 {
-        grid-area: photo4;
-        width: 96px;
-        height: 125px;
-    }
-    .photo5 {
-        grid-area: photo5;
-        width: 96px;
-        height: 125px;
-    }
-    .photo6 {
-        grid-area: photo6;
-        width: 96px;
-        height: 125px;
-    }
-    .contact {
-        grid-area: contact;
-        margin: auto;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        color: #2d678a;
-        font-size: 62px;
-        font-weight: bold;
-    }
-    .info1 {
-        grid-area: info1;
-        // width: 50px;
-        // height: 100px;
-        justify-self: center;
-    }
-    .info2 {
-        grid-area: info2;
-        // width: 200px;
-        // height: 100px;
-        justify-self: center;
-    }
-    .info3 {
-        grid-area: info3;
-        // width: 100px;
-        // height: 100px;
-        justify-self: center;
-    }
-}
-
-@media screen and(max-width: 1750px) {
-    .container {
-        width: 75%;
-        margin: 0 auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 225px 150px 100px 280px 280px 280px 150px 100px 145px;
-        // gap: 20px 80px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "logo texto"
-            "logoguia guia"
-            "targets targets"
-            "photo1 photo2"
-            "photo3 photo4"
-            "photo5 photo6"
-            "contact contact"
-            "info1 info2"
-            "info3 info3";
-    }
-    .logo {
-        grid-area: logo;
-        margin: auto;
-        width: 200px;
-        height: 200px;
-    }
-    .texto {
-        grid-area: texto;
-        font-size: 14px;
-        margin: auto;
-        width: 580px;
-        height: 180px;
-        margin-right: 30px;
-    }
-    
-    .logoguia {
-        grid-area: logoguia; 
-        background: url("../../../assets/img/guia1.jpg");
-        border-radius: 8%;
-        margin-left: 500px;
-     }
-    
-    .guia {
-        grid-area: guia; 
-        font-size: 26px;
-        align-content: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: left;
-    }
-
-    .targets {
-        grid-area: targets;
-        margin: auto;
-        padding: 30px;
-        // background-color: #0973b1;
-        color: #2d678a;
-        font-size: 62px;
-        font-weight: bold;
-    }
-    .example-card {
-        width: 300px;
-        max-width: 600px;
-        min-width: 192px;
-        max-height: 250px;
-        border-radius: 4%;
-    }
-
-    .info-card {
-        background-color: #474b64; 
-              width: 125px;
-                height: 125px;
-        max-width: 300px;
-        border-radius: 50%;
-    }
-
-    .mat-card-image {
-        width: 100px;
-        height: 100px;
-        margin: auto;
-    }
-
-    .card-title {
-        width: 250px;
-        height: 120px;
+        // display: flex;
+        // align-items: center;
+        // flex-direction: row;
+        // justify-content: center;
         font-size: 22px;
-        margin-bottom: 30px;
+        // margin-right: 30px;
+        // width: 280px;
+        height: 214px;
+    }
+     
+    .logoguia {
+        grid-area: logoguia; 
+        background: url("../../../assets/img/guia1.jpg");
+        border-radius: 8%;
+        // margin-left: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+     }
+    
+    .guia {
+        grid-area: guia; 
+        font-size: 26px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
     }
 
-        .photo1 {
-        grid-area: photo1;
-        justify-content: center;
-        width: 96px;
-        height: 125px;
-    }
-    .photo2 {
-        grid-area: photo2;
-        width: 96px;
-        height: 125px;
-    }
-    .photo3 {
-        grid-area: photo3;
-        width: 96px;
-        height: 125px;
-    }
-    .photo4 {
-        grid-area: photo4;
-        width: 96px;
-        height: 125px;
-    }
-    .photo5 {
-        grid-area: photo5;
-        width: 96px;
-        height: 125px;
-    }
-    .photo6 {
-        grid-area: photo6;
-        width: 96px;
-        height: 125px;
-    }
-    .contact {
-        grid-area: contact;
-        margin: auto;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        color: #2d678a;
-        font-size: 52px;
-        font-weight: bold;
-    }
-    .info1 {
-        grid-area: info1;
-              justify-self: center;
-             
-    }
-    .info2 {
-        grid-area: info2;
-        margin-right: 50px;
-              justify-self: right;
-    }
-    .info3 {
-        grid-area: info3;
-      justify-self: center;
-    }
- 
-}
-
-@media screen and(max-width: 850px) {
-    .container {
-        width: 100%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 225px 100px 280px 280px 280px 150px 150px 175px;
-        // gap: 20px 80px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "logo logo"
-            "texto texto"
-            "targets targets"
-            "photo1 photo2"
-            "photo3 photo4"
-            "photo5 photo6"
-            "contact contact"
-            "info1 info2"
-            "info3";
-    }
-    .logo {
-        grid-area: logo;
-        // margin: auto;
-        width: 150px;
-        height: 150px;
-    }
-    .texto {
-        grid-area: texto;
-        font-size: 16px;
-        margin-right: 30px;
-        // width: 580px;
-        // height: 180px;
-    }
-    .targets {
-          grid-area: targets;
-        font-size: 52px;
-    }
-    .example-card {
-        width: 300px;
-        max-width: 300px;
+ .card {
+        grid-area: card; 
+        width: 200px;
+        height: 275px;
         border-radius: 10%;
     }
 
+    .targets {
+         grid-area: targets;
+        font-size: 42px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+   
     .info-card {
         background-color: #474b64; 
-        width: 300px;
-        width: 200px;
-        max-width: 300px;
-        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+         border-radius: 50%;
     }
 
     .mat-card-image {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         margin: auto;
     }
 
     .card-title {
-        width: 250px;
+        width: 140px;
         height: 120px;
-        font-size: 22px;
+        font-size: 14px;
       margin: auto;
     }
 
     .photo1 {
         grid-area: photo1;
-        justify-content: center;
-        width: 96px;
+        // justify-content: center;
+        // width: 96px;
         height: 125px;
     }
     .photo2 {
@@ -558,27 +301,35 @@
     .contact {
         grid-area: contact;
         margin: auto;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        color: #2d678a;
+             color: #2d678a;
         font-size: 42px;
         font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .info-img{
+        width: 50px;
+        height: 50px;
     }
     .info1 {
         grid-area: info1;
-        width: 50px;
+        width: 100px;
         height: 100px;
         justify-self: center;
+        justify-self: center;
+        font-size: 12px;
     }
     .info2 {
         grid-area: info2;
-        width: 200px;
+        width: 100px;
         height: 100px;
         justify-self: center;
+        font-size: 12px;
     }
     .info3 {
         grid-area: info3;
-        // width: 100px;
+        width: 100px;
         height: 100px;
         justify-self: center;
     }
@@ -588,10 +339,512 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        font-size: 20px;
+        font-size: 12px;
         font-weight: bold;
         color: white;
     }
+    }
+
+@media screen and(max-width: 1280px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 210px 210px 210px 210px 210px 210px;
+        grid-template-rows: 245px 60px 50px 280px 80px 120px;       // gap: 20px 80px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". logo texto texto texto ."
+            ". . . . logoguia guia"
+            "targets targets targets targets targets targets"
+            "photo1 photo2 photo3 photo4 photo5 photo6"
+            "contact contact contact contact contact contact"
+            "info1 info1 info2 info2 info3 info3"
+    }
+    .logo {
+        grid-area: logo;
+        // margin: auto;
+        width: 214px;
+        height: 214px;
+    }
+
+    .texto {
+        grid-area: texto;
+        // display: flex;
+        // align-items: center;
+        // flex-direction: row;
+        // justify-content: center;
+        font-size: 22px;
+        // margin-right: 30px;
+        // width: 280px;
+        height: 214px;
+    }
+     
+    .logoguia {
+        grid-area: logoguia; 
+        background: url("../../../assets/img/guia1.jpg");
+        border-radius: 8%;
+        // margin-left: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+     }
     
+    .guia {
+        grid-area: guia; 
+        font-size: 26px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+
+ .card {
+        grid-area: card; 
+        width: 200px;
+        height: 275px;
+        border-radius: 10%;
+    }
+
+    .targets {
+         grid-area: targets;
+        font-size: 42px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
    
-}
+    .info-card {
+        background-color: #474b64; 
+        width: 100px;
+        height: 100px;
+         border-radius: 50%;
+    }
+
+    .mat-card-image {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+    }
+
+    .card-title {
+        width: 140px;
+        height: 120px;
+        font-size: 14px;
+      margin: auto;
+    }
+
+    .photo1 {
+        grid-area: photo1;
+        // justify-content: center;
+        // width: 96px;
+        height: 125px;
+    }
+    .photo2 {
+        grid-area: photo2;
+        // width: 96px;
+        height: 125px;
+    }
+    .photo3 {
+        grid-area: photo3;
+        // width: 96px;
+        height: 125px;
+    }
+    .photo4 {
+        grid-area: photo4;
+        // width: 96px;
+        height: 125px;
+    }
+    .photo5 {
+        grid-area: photo5;
+        // width: 96px;
+        height: 125px;
+    }
+    .photo6 {
+        grid-area: photo6;
+        // width: 96px;
+        height: 125px;
+    }
+    .contact {
+        grid-area: contact;
+        margin: auto;
+             color: #2d678a;
+        font-size: 42px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .info-img{
+        width: 50px;
+        height: 50px;
+    }
+    .info1 {
+        grid-area: info1;
+        width: 100px;
+        height: 100px;
+        justify-self: center;
+        justify-self: center;
+        font-size: 12px;
+    }
+    .info2 {
+        grid-area: info2;
+        width: 100px;
+        height: 100px;
+        justify-self: center;
+        font-size: 12px;
+    }
+    .info3 {
+        grid-area: info3;
+        width: 100px;
+        height: 100px;
+        justify-self: center;
+    }
+
+    .contactos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+    }
+    }
+
+
+    @media screen and(max-width: 768px) {
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 340px 340px;
+            grid-template-rows: 245px 60px 40px 150px 150px 150px 40px 90px;       // gap: 20px 80px;
+            // grid-auto-flow: row;
+            grid-template-areas:
+                " logo texto"
+                "logoguia guia"
+                "targets targets"
+                "photo1 photo2"
+                "photo3 photo4"
+                "photo5 photo6"
+                "contact contact"
+                "info1 info3"
+        }
+        .logo {
+            grid-area: logo;
+            // margin: auto;
+            width: 214px;
+            height: 214px;
+        }
+    
+        .texto {
+            grid-area: texto;
+            // display: flex;
+            // align-items: center;
+            // flex-direction: row;
+            // justify-content: center;
+            font-size: 14px;
+            // margin-right: 30px;
+            // width: 280px;
+            height: 214px;
+        }
+         
+        .logoguia {
+            grid-area: logoguia; 
+            background: url("../../../assets/img/guia1.jpg");
+            border-radius: 8%;
+            margin-left: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: right;
+            justify-content: right;
+         }
+        
+        .guia {
+            grid-area: guia; 
+            font-size: 26px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+        }
+    
+     .card {
+            grid-area: card; 
+            width: 250px;
+            height: 140px;
+            border-radius: 10%;
+        }
+    
+        .targets {
+             grid-area: targets;
+            font-size: 32px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+       
+        .info-card {
+            background-color: #474b64; 
+            width: 120px;
+            height: 80px;
+             border-radius: 50%;
+        }
+    
+        .mat-card-image {
+            width: 44px;
+            height: 40px;
+            // margin-left: 120px;
+        }
+    
+        .card-title {
+            width: 170px;
+            height: 60px;
+            font-size: 16px;
+        //   margin: auto;
+        }
+    
+        .photo1 {
+            grid-area: photo1;
+            // justify-content: center;
+            // width: 96px;
+            height: 60px;
+        }
+        .photo2 {
+            grid-area: photo2;
+            // width: 96px;
+            height: 60px;
+        }
+        .photo3 {
+            grid-area: photo3;
+            // width: 96px;
+            height: 60px;
+        }
+        .photo4 {
+            grid-area: photo4;
+            // width: 96px;
+            height: 60px;
+        }
+        .photo5 {
+            grid-area: photo5;
+            // width: 96px;
+            height: 60px;
+        }
+        .photo6 {
+            grid-area: photo6;
+            // width: 96px;
+            height: 60px;
+        }
+        .contact {
+            grid-area: contact;
+            margin: auto;
+                 color: #2d678a;
+            font-size: 32px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .info-img{
+            width: 50px;
+            height: 50px;
+        }
+        .info1 {
+            grid-area: info1;
+            width: 100px;
+            height: 100px;
+            justify-self: center;
+            justify-self: center;
+            font-size: 12px;
+        }
+        .info2 {
+            grid-area: info2;
+            width: 100px;
+            height: 1px;
+            justify-self: center;
+            font-size: 12px;
+        }
+        .info3 {
+            grid-area: info3;
+            width: 100px;
+            height: 100px;
+            justify-self: center;
+        }
+    
+        .contactos {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        }
+
+        @media screen and(max-width: 375px) {
+            .container {
+                width: 100%;
+                margin: 0 auto;
+                grid-template-columns: 180px 180px;
+                grid-template-rows: 70px 50px 30px 140px 140px 140px 50px 70px;       // gap: 20px 80px;
+                grid-template-areas:
+                    "logo texto"
+                    "logoguia guia"
+                    "targets targets"
+                    "photo1 photo2"
+                    "photo3 photo4"
+                    "photo5 photo6"
+                    "contact contact"
+                    "info1 info3"
+            }
+            .logo {
+                grid-area: logo;
+                width: 60px;
+                height: 60px;
+            }
+        
+            .texto {
+                grid-area: texto;
+                font-size: 6px;
+                width: 160px;
+                height: 60px;
+            }
+             
+            .logoguia {
+                grid-area: logoguia; 
+                background: url("../../../assets/img/guia1.jpg");
+                border-radius: 8%;
+                // margin-left: 200px;
+                width: 111px;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                // align-items: right;
+                justify-content: right;
+             }
+            
+            .guia {
+                grid-area: guia; 
+                font-size: 8px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+            }
+        
+         .card {
+                grid-area: card; 
+                width: 160px;
+                height: 130px;
+                                border-radius: 10%;
+            }
+          
+            .mat-card-image {
+                width: 50px;
+                height: 50px;
+                // margin-left: 120px;
+            }
+        
+            .card-title {
+                width: 140px;
+                height: 80px;
+                font-size: 10px;
+                margin-bottom: 0px;
+            //   margin: auto;
+            }
+        
+            .targets {
+                 grid-area: targets;
+                font-size: 16px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+              
+            .photo1 {
+                grid-area: photo1;
+                // justify-content: center;
+                // width: 96px;
+                height: 50px;
+            }
+            .photo2 {
+                grid-area: photo2;
+                // width: 96px;
+                height: 50px;
+            }
+            .photo3 {
+                grid-area: photo3;
+                // width: 96px;
+                height: 50px;
+            }
+            .photo4 {
+                grid-area: photo4;
+                // width: 96px;
+                height: 50px;
+            }
+            .photo5 {
+                grid-area: photo5;
+                // width: 96px;
+                height: 50px;
+            }
+            .photo6 {
+                grid-area: photo6;
+                // width: 96px;
+                height: 50px;
+            }
+            .contact {
+                grid-area: contact;
+                margin: auto;
+                     color: #2d678a;
+                font-size: 22px;
+                font-weight: bold;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .info-card {
+                background-color: #474b64; 
+                width: 60px;
+                height: 40px;
+                 border-radius: 50%;
+            }
+            .info1 {
+                grid-area: info1;
+                width: 50px;
+                height: 50px;
+                justify-self: center;
+                justify-self: center;
+                font-size: 12px;
+            }
+            .info-img{
+                width: 30px;
+                height: 20px;
+            }
+            .info2 {
+                grid-area: info2;
+                width: 1px;
+                height: 1px;
+                justify-self: center;
+                font-size: 12px;
+            }
+            .info3 {
+                grid-area: info3;
+                width: 50px;
+                height: 50px;
+                justify-self: center;
+            }
+        
+            .contactos {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 12px;
+                font-weight: bold;
+                color: white;
+            }
+            }
