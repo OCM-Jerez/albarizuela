@@ -1,15 +1,15 @@
-<nav class="OCM-navbarFooter">
+<nav class="navbar">
 
-  <div class="OCM-navbarFooter--brand">
-    <a class="OCM-navbarFooter--brand--logo" target="_blank" rel="nofollow"></a>
-    <span class="OCM-navbarFooter--brand--text">Asociación de vecinos La Albarizuela</span>
+  <div class="navbar--brand">
+    <a class="navbar--brand--logo" target="_blank" rel="nofollow"></a>
+    <span class="navbar--brand--text">Asociación de vecinos La Albarizuela</span>
   </div>
 
   <div class="menu-button">
-    <button mat-raised-button color="primary" routerLink="home">Inicio</button>
-    <button mat-raised-button color="primary" routerLink="map">Mapa problemas</button>
-    <button mat-raised-button color="primary" routerLink="table">Tabla problemas</button>
-    <button mat-raised-button color="primary" routerLink="contenedores-bizcocheros">Contenedores Bizcocheros</button>
+    <button routerLink="home">Inicio</button>
+    <button routerLink="map">Mapa problemas</button>
+    <button routerLink="table">Tabla problemas</button>
+    <button routerLink="contenedores-bizcocheros">Contenedores Bizcocheros</button>
   </div>
 
   <div *ngIf="router.url === '/home'" class="OCM-navbarFooter--homeEmpty"></div>

@@ -1,0 +1,75 @@
+@import url("https://unpkg.com/leaflet@1.7.1/dist/leaflet.css");
+
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-balham.css";
+
+@import "/src/app/scss/animations";
+@import "/src/app/scss/base";
+@import "/src/app/scss/functions";
+@import "/src/app/scss/mixins";
+@import "/src/app/scss/typography";
+@import "/src/app/scss/utilities";
+@import "/src/app/scss/variables";
+
+.navbar {
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    display: flex;
+    justify-content:start;
+    width: 100%;
+    height: 40px;
+    background-color: map-get($OCM-colors, navBarBackground);
+    &--brand {
+        display: flex;
+        justify-content: space-between;
+        &--logo {
+            @include OCM-logo;
+            background: url("../../../assets/img/LogoImg.jpg") no-repeat center center;
+        }
+        &--text {
+            @include OCM-text;
+            font-size: 12px;
+                     }
+    }
+   }
+
+.menu-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;  ;
+    width: 340px;
+    height: 40px;
+    margin-left: 20px;
+ }
+
+button {
+    width: 52px;
+    margin-left: 5px;
+    background-color:rgb(117, 137, 201) ;
+    cursor: pointer;
+    font-size: 7px;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media screen and(max-width: 375px) {  // iPhone X 375 x 812
+    .navbar {
+        &--brand {
+            &--text {
+                @include OCM-text;
+                font-size: 6px;
+                    }
+        }
+           }
+
+           .menu-button {
+            margin-left: 1px;
+         }
+}
+@media screen and(max-width: 360px) { // Galaxy S5 360 x 640
+     
+}

@@ -182,7 +182,7 @@
      margin: 0 auto;
      // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
      grid-template-columns: 210px 210px 210px 210px 210px 210px;
-     grid-template-rows: 245px 60px 50px 280px 80px 120px;       // gap: 20px 80px;
+     grid-template-rows: 245px 60px 60px 280px 100px 120px;         // gap: 20px 80px;
      grid-auto-flow: row;
      grid-template-areas:
          ". logo texto texto texto ."
@@ -192,9 +192,9 @@
          "contact contact contact contact contact contact"
          "info1 info1 info2 info2 info3 info3"
  }
+
  .logo {
      grid-area: logo;
-     // margin: auto;
      width: 214px;
      height: 214px;
  }
@@ -211,12 +211,12 @@
     }
  
  .guia {
-     grid-area: guia; 
-     font-size: 26px;
+     grid-area: guia;  
+     font-size: 2rem;
     }
  .targets {
      grid-area: targets;
-    font-size: 42px;
+    font-size: 4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -224,37 +224,40 @@
  .card {
       border-radius: 10%;
       }
- .info-card {
-     background-color: #474b64; 
-     width: 100px;
-     height: 100px;
-      border-radius: 50%;
- }
+
  .mat-card-image {
      width: 80px;
      height: 80px;
      margin: auto;
  }
+
  .card-title {
      width: 140px;
-     height: 120px;
-     font-size: 14px;
-   margin: auto;
+     height: 160px;
+     font-size: 2rem;
+     font-weight: bold;
+     margin: auto;
  }
    .contact {
      grid-area: contact;
      margin: auto;
-          color: #2d678a;
-     font-size: 42px;
+     color: #2d678a;
+     font-size: 4rem;
      font-weight: bold;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
- }
+    }
+
+    .info-card {
+        background-color: #474b64; 
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
  .info-img{
      width: 50px;
      height: 50px;
  }
+
  .info1 {
      grid-area: info1;
      width: 100px;
@@ -281,7 +284,7 @@
      align-items: center;
      flex-direction: column;
      justify-content: center;
-     font-size: 12px;
+     font-size: 1rem;
      font-weight: bold;
      color: white;
  }
@@ -291,117 +294,11 @@
 .container {
     width: 100%;
     padding-left: 20px;
-    grid-template-columns: 210px 210px 210px 210px 210px 210px;
-    grid-template-rows: 245px 60px 60px 280px 100px 120px;     
-    grid-auto-flow: row;
-    grid-template-areas:
-        ". logo texto texto texto ."
-        ". . . . logoguia guia"
-        "targets targets targets targets targets targets"
-        "card-area1 card-area2 card-area3 card-area4 card-area5 card-area6"
-        "contact contact contact contact contact contact"
-        "info1 info1 info2 info2 info3 info3"
-}
-.logo {
-    grid-area: logo;
-    width: 214px;
-    height: 214px;
-}
-.texto {
-    grid-area: texto;
-    font-size: 22px;
-    height: 214px;
-}
- 
-.logoguia {
-    grid-area: logoguia; 
-    background: url("../../../assets/img/guia1.jpg");
-    border-radius: 8%;
- }
-
-.guia {
-    grid-area: guia; 
-    font-size: 26px;
-}
-
-.targets {
-    grid-area: targets;
-   font-size: 4rem;
-   font-weight: bold;
- }
-
-.card {
-     border-radius: 10%;
-     }
-
-.mat-card-image {
-    width: 80px;
-    height: 80px;
-    margin: auto;
-}
-.card-title {
-    width: 140px;
-    height: 160px;
-    font-size: 2rem;
-  margin: auto;
-}
-.contact {
-    grid-area: contact;
-    margin: auto;
-         color: #2d678a;
-         font-size: 4rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.info-card {
-    background-color: #474b64; 
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.info-img{
-    width: 50px;
-    height: 50px;
-}
-.info1 {
-    grid-area: info1;
-    width: 100px;
-    height: 100px;
-    justify-self: center;
-    justify-self: center;
-    font-size: 12px;
-}
-.info2 {
-    grid-area: info2;
-    width: 100px;
-    height: 100px;
-    justify-self: center;
-    font-size: 12px;
-}
-.info3 {
-    grid-area: info3;
-    width: 100px;
-    height: 100px;
-    justify-self: center;
-}
-.contactos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
 }
 }
 
 @media screen and(max-width: 768px) {   // iPad 768 x 1024
   .container {
-      width: 100%;
       padding-left: 50px;
       grid-template-columns: ifr 1fr 1fr;
       grid-template-rows: 245px 60px 45px 230px 230px 40px 90px;    
@@ -427,18 +324,7 @@
       font-size: 14px;
       height: 214px;
   }
-   
-  .logoguia {
-      grid-area: logoguia; 
-      background: url("../../../assets/img/guia1.jpg");
-      border-radius: 8%;
-   }
-  
-  .guia {
-      grid-area: guia; 
-      font-size: 2rem;
-           }
-  
+
   .targets {
       grid-area: targets;
       font-size: 2.5rem;
@@ -448,73 +334,24 @@
       border-color: #382526;
       border-width:  1px;
       border-style: solid;
-       border-radius: 10%;
        }
- 
-  .info-card {
-      background-color: #474b64; 
-      width: 120px;
-      height: 80px;
-       border-radius: 50%;
-  }
- 
-  .mat-card-image {
-      width: 84px;
-      height: 80px;
-  }
  
   .card-title {
       width: 170px;
       height: 140px;
-      font-size: 16px;
-  }
+           }
  
        .contact {
       grid-area: contact;
-      margin: auto;
-           color: #2d678a;
-      font-size: 2.5rem;
-      font-weight: bold;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-  }
-  .info-img{
-      width: 50px;
-      height: 50px;
-  }
-  .info1 {
-      grid-area: info1;
-      width: 100px;
-      height: 100px;
-      justify-self: center;
-      justify-self: center;
-      font-size: 12px;
-  }
-  .info2 {
-      grid-area: info2;
-      width: 100px;
-      height: 1px;
-      justify-self: center;
-      font-size: 12px;
-  }
-  .info3 {
-      grid-area: info3;
-      width: 100px;
-      height: 100px;
-      justify-self: center;
-  }
+       font-size: 2.5rem;
+      }
+
+  .info-card {
+      width: 120px;
+    height: 80px;
+ }
  
-  .contactos {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: bold;
-      color: white;
-  }
-    }
+   }
 
 @media screen and(max-width: 375px) {  // iPhone X 375 x 812
     .container {
@@ -568,14 +405,7 @@
        grid-area: targets;
        font-size: 2rem;
    }
-
-    .card {
-        border-color: #382526;
-        border-width:  1px;
-        border-style: solid;
-         border-radius: 10%;
-         }
-  
+ 
     .mat-card-image {
         width: 50px;
         height: 50px;
@@ -590,16 +420,14 @@
    
     .contact {
         grid-area: contact;
-        color: #2d678a;
         font-size: 2rem;
            }
 
     .info-card {
-        background-color: #474b64; 
         width: 60px;
         height: 40px;
-         border-radius: 50%;
     }
+
     .info1 {
         grid-area: info1;
         width: 50px;
@@ -678,76 +506,19 @@
         font-size: 8px;
         display: flex;
           }
+
     .targets {
        grid-area: targets;
       font-size: 1.5rem;
       }
    
-    .card {
-        border-color: #382526;
-        border-width:  1px;
-        border-style: solid;
-         border-radius: 10%;
-         }
-  
     .mat-card-image {
         width: 0px;
         height: 0px;
     }
-
-    .card-title {
-        width: 140px;
-        height: 80px;
-        font-size: 10px;
-        margin-bottom: 0px;
-    }
-           
+        
     .contact {
-        grid-area: contact;
-        margin: auto;
-        color: #2d678a;
         font-size: 1.5rem;
-        font-weight: bold;
           }
 
-    .info-card {
-        background-color: #474b64; 
-        width: 60px;
-        height: 40px;
-         border-radius: 50%;
-    }
-    .info1 {
-        grid-area: info1;
-        width: 50px;
-        height: 50px;
-        justify-self: center;
-        font-size: 12px;
-    }
-    .info-img{
-        width: 30px;
-        height: 20px;
-    }
-    .info2 {
-        grid-area: info2;
-        width: 1px;
-        height: 1px;
-        justify-self: center;
-        font-size: 12px;
-    }
-    .info3 {
-        grid-area: info3;
-        width: 50px;
-        height: 50px;
-        justify-self: center;
-    }
-
-    .contactos {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 12px;
-        font-weight: bold;
-        color: white;
-    }
     }
