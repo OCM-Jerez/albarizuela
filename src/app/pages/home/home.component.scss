@@ -5,7 +5,6 @@
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 400px 150px 140px 500px 140px 300px;
-    // gap: 20px 80px;
     grid-auto-flow: row;
     grid-template-areas:
     "logo logo texto texto texto texto"
@@ -13,7 +12,7 @@
     "targets targets targets targets targets targets "
     "card-area1 card-area2 card-area3 card-area4 card-area5 card-area6"
     "contact contact contact contact contact contact"
-    "info1 info1 info2 info2 info3 info3";
+    "info info info info info info";
     color: aqua;
     background-image: url('../../../assets/img/fondo2.svg');
     background-size: cover;
@@ -34,13 +33,11 @@
     height: 300px;
     margin-top: auto;
     margin-bottom: auto;
-  
     padding: 30px;
     background-color: #2d678a;
     color: rgb(206, 219, 231);
     font-size: 26px;
     align-content: center;
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -49,10 +46,10 @@
 
 .logoguia {
     grid-area: logoguia; 
-      background: url("../../../assets/img/guia1.jpg");
-     width: 111px;
-     margin-left: 70px;
-     border-radius: 8%;
+    background: url("../../../assets/img/guia1.jpg");
+    width: 111px;
+    margin-left: 70px;
+    border-radius: 8%;
   }
 
 .guia {
@@ -64,8 +61,6 @@
 .targets {
     grid-area: targets;
     margin: auto;
-    // padding: 31px;
-    // background-color: #0973b1;
     color: #2d678a;
     font-size: 62px;
     font-weight: bold;
@@ -134,25 +129,20 @@
     margin: auto;
     margin-top: 60px;
     margin-bottom: 60px;
-       color: #2d678a;
+    color: #2d678a;
     font-size: 62px;
     font-weight: bold;
 }
 
-.info1 {
-    grid-area: info1;
-     justify-self: center;
-}
-.info2 {
-    grid-area: info2;
-    justify-self: center;
-}
-.info3 {
-    grid-area: info3;
-     justify-self: center;
-}
+.info {
+    grid-area: info;
+    margin: 0px 30px 0px 30px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+   }
 
-.contactos {
+   .contactos {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -190,7 +180,7 @@
          "targets targets targets targets targets targets"
          "card-area1 card-area2 card-area3 card-area4 card-area5 card-area6"
          "contact contact contact contact contact contact"
-         "info1 info1 info2 info2 info3 info3"
+         "info info info info info info";
  }
 
  .logo {
@@ -258,27 +248,6 @@
      height: 50px;
  }
 
- .info1 {
-     grid-area: info1;
-     width: 100px;
-     height: 100px;
-     justify-self: center;
-     justify-self: center;
-     font-size: 12px;
- }
- .info2 {
-     grid-area: info2;
-     width: 100px;
-     height: 100px;
-     justify-self: center;
-     font-size: 12px;
- }
- .info3 {
-     grid-area: info3;
-     width: 100px;
-     height: 100px;
-     justify-self: center;
- }
  .contactos {
      display: flex;
      align-items: center;
@@ -309,7 +278,7 @@
           "card-area1 card-area2 card-area3"
           "card-area4 card-area5 card-area6"
           "contact contact contact"
-          "info1 . info3"
+          "info info info"
   }
   .logo {
       grid-area: logo;
@@ -341,7 +310,7 @@
       height: 140px;
            }
  
-       .contact {
+     .contact {
       grid-area: contact;
        font-size: 2.5rem;
       }
@@ -367,7 +336,7 @@
             "card-area3 card-area4"
             "card-area5 card-area6"
             "contact contact"
-            "info1 info3"
+            "info info"
     }
 
     .logo {
@@ -428,32 +397,11 @@
         height: 40px;
     }
 
-    .info1 {
-        grid-area: info1;
-        width: 50px;
-        height: 50px;
-        justify-self: center;
-        justify-self: center;
-        font-size: 12px;
-    }
     .info-img{
         width: 30px;
         height: 20px;
     }
-    .info2 {
-        grid-area: info2;
-        width: 1px;
-        height: 1px;
-        justify-self: center;
-        font-size: 12px;
-    }
-    .info3 {
-        grid-area: info3;
-        width: 50px;
-        height: 50px;
-        justify-self: center;
-    }
-
+   
     .contactos {
         display: flex;
         align-items: center;
@@ -479,7 +427,7 @@
             "card-area3 card-area4"
             "card-area5 card-area6"
             "contact contact"
-            "info1 info3"
+            "info info"
     }
     .logo {
         grid-area: logo;
