@@ -50,12 +50,19 @@
     width: 111px;
     margin-left: 70px;
     border-radius: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
   }
 
 .guia {
     grid-area: guia; 
-    font-size: 26px;
-    align-content: center;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
   }
 
 .targets {
@@ -193,17 +200,7 @@
      font-size: 22px;
      height: 214px;
  }
-  
- .logoguia {
-     grid-area: logoguia; 
-     background: url("../../../assets/img/guia1.jpg");
-     border-radius: 8%;
-    }
- 
- .guia {
-     grid-area: guia;  
-     font-size: 2rem;
-    }
+
  .targets {
      grid-area: targets;
     font-size: 4rem;
@@ -355,20 +352,17 @@
         margin-left: -60px;
     }
      
-    .logoguia {
-        grid-area: logoguia; 
-        background: url("../../../assets/img/guia1.jpg");
-        border-radius: 8%;
-        margin-left: 135px;
-        width: 111px;
-        height: 40px;
-                  }
-    
-    .guia {
-        grid-area: guia; 
-        font-size: 1.2rem;
-        margin-left: 70px;
-          }
+.logoguia {
+     justify-content: end;
+        margin-left: 140px;
+   }
+
+.guia {
+    grid-area: guia; 
+    font-size: 1rem;
+    margin-left: 90px;
+    }
+
 
     .targets {
        grid-area: targets;
@@ -418,7 +412,7 @@
         width: 100%;
         padding-left: 0px;
         grid-template-columns: 180px 180px;
-        grid-template-rows: 90px 20px 20px 105px 105px 105px 35px 40px;    
+        grid-template-rows: 90px 20px 35px 105px 105px 105px 35px 60px;    
         grid-template-areas:
             "logo texto"
             ". guia"
@@ -451,9 +445,8 @@
          
     .guia {
         grid-area: guia; 
-        font-size: 8px;
-        display: flex;
-          }
+        font-size: 0.8rem;
+                 }
 
     .targets {
        grid-area: targets;
